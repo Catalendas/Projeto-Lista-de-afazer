@@ -1,0 +1,22 @@
+.header{
+    height: 200px;
+    width: 100%;
+    
+    background: var(--gray-700);
+}
+
+.header div {
+    max-width: 1120px;
+    margin: 0 auto;
+
+    padding: 2rem 1rem 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header div img {
+    height: 4rem;
+    width: 10rem;
+}
+
