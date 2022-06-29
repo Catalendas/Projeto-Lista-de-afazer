@@ -10,6 +10,7 @@ interface Task {
 import style from './task.module.css'
     export function Task() {
 
+        const [completTask, setCompleteTask] = useState(0)
         const [tasks, setTasks] = useState<Task[]>([])
         const [taskTitle, setTaskTitle] = useState('')
 
@@ -43,6 +44,8 @@ import style from './task.module.css'
             setTasks(filteredTask)
         }
 
+        const taskComplete = tasks.filter(task => task.isComplete )
+
 
         return(
             <section className={style.section}>
@@ -64,8 +67,8 @@ import style from './task.module.css'
 
                 <main> 
                     <div className={style.headeList}>          
-                        <span>Tarefas craidas <strong>0</strong></span>
-                        <span>Concluidas <strong>0</strong></span>     
+                        <span>Tarefas craidas <strong>{tasks.length}</strong></span>
+                        <span>Concluidas <strong>{taskComplete.length}</strong> de <strong>{tasks.length}</strong></span>     
                     </div>              
 
                     <div>    
