@@ -10,7 +10,6 @@ interface Task {
 import style from './task.module.css'
     export function Task() {
 
-        const [completTask, setCompleteTask] = useState(0)
         const [tasks, setTasks] = useState<Task[]>([])
         const [taskTitle, setTaskTitle] = useState('')
 
@@ -44,7 +43,7 @@ import style from './task.module.css'
             setTasks(filteredTask)
         }
 
-        const taskComplete = tasks.filter(task => task.isComplete )
+        const taskComplete = tasks.filter(task => task.isComplete)
 
 
         return(
